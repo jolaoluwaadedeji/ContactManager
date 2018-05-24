@@ -61,14 +61,13 @@ class ContactManager{
         ContactManager.surname = document.querySelector("#Surname");
         ContactManager.firstname = document.querySelector("#Firstname");
         ContactManager.phoneNumber = document.querySelector("#Phonenumber");
-        ContactManager.contactList = document.querySelector("#contactList");
+        ContactManager.contactList = document.querySelector("#contacts");
     }
 
     static listContacts(){
-        var ulList = document.querySelector("#contactList ul");
-        if(ulList == null){
-            ContactManager.loadLocalStorage();
-        }
+        document.querySelector("#contacts").innerHTML = "";
+        
+        ContactManager.loadLocalStorage();
     }
     static sortContacts(){
         ContactManager.Contacts.sort(function(a,b){
