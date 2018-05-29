@@ -66,7 +66,6 @@ class ContactManager{
 
     static listContacts(){
         document.querySelector("#contacts").innerHTML = "";
-        
         ContactManager.loadLocalStorage();
     }
     static sortContacts(){
